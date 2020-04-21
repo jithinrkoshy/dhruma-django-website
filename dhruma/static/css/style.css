@@ -1,0 +1,442 @@
+
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html{
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+
+}
+
+.clearfix { zoom:1}
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.row{
+  max-width: 1140px;
+  margin: 0 auto;
+
+}
+
+
+header{
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) ,url(forest.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+
+}
+
+h1{
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+h2{
+  margin-top: 0px;
+  padding-top: 60px;
+  margin-bottom: 30px;
+  font-size: 180%;
+  font-weight: 300;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+h2:after{
+  content: " ";
+  display: block;
+  height: 2px;
+  background-color: #2ECC40;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+}
+
+h3{
+  margin-top: 0px;
+  padding-top: 0;
+  margin-bottom: 30px;
+  font-size: 120%;
+  font-weight: 300;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+
+}
+
+.test-head{
+  color: #e8e8e8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-weight: 100;
+  font-style: italic;
+}
+
+
+.navig{
+  float: right;
+  list-style: none;
+  padding-top: 40px;
+
+}
+
+.navig li{
+  display: inline-block;
+  margin-right: 30px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.navig li:hover,
+.navig li:active{
+  transform: scale(1.15);
+}
+
+
+
+.navig li a:link,
+.navig li a:visited{
+  color: #efefef;
+  font-weight: 400;
+  text-decoration: none;
+  padding-bottom: 10px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+  outline: 0;
+}
+
+.navig li a:hover,
+.navig li a:active{
+  border-bottom: 1px solid #fff;
+}
+
+
+nav img{
+  width:160px;
+  height: auto;
+  float:left;
+  margin-top: 5px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.2s;
+
+}
+
+nav img:hover,
+nav img:active{
+
+  transform: scale(1.15);
+
+}
+
+.stickynull{
+  display:none;
+}
+.sticky{
+  position: fixed;
+  list-style: none;
+  top:10px;
+  left:70%;
+  display:block;
+  background-image: url(darkgreen.jpg);
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+
+
+}
+
+.sticky div{
+  margin: 5px auto;
+}
+
+.sticky li{
+  display: inline-block;
+
+  margin-left: 20px;
+
+
+  transform: scale(1);
+  transition: transform 0.2s;
+
+}
+
+.sticky li a:link,
+.sticky li a:visited{
+  color: #efefef;
+  font-weight: 400;
+  text-decoration: none;
+
+  padding-bottom: 10px;
+
+
+  outline: 0;
+}
+
+
+.sticky li:hover,
+.sticky li:active{
+ transform: scale(1.15);
+
+}
+.sticky{
+  opacity: 0;
+}
+
+.sticky .animated{
+  opacity: 1;
+
+}
+
+
+section{
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+}
+
+
+
+
+
+.container{
+
+  height: 400px;
+
+}
+
+.division:after{
+  content: " ";
+  display: inline-block;
+  height: 300px;
+  background-color: #efefef;
+  width: 2px;
+  margin-top: 35px;
+  margin-left: 55px;
+}
+/* Scrollbar styling*/
+
+/* total width */
+div::-webkit-scrollbar {
+    background-color:#fff;
+    width:0
+}
+
+/* background of the scrollbar except button or resizer */
+div::-webkit-scrollbar-track {
+    background-color:#fff
+}
+
+/* scrollbar itself */
+div::-webkit-scrollbar-thumb {
+    background-color:#fff;
+    border-radius:0;
+    border:4px solid #fff
+}
+
+/* set button(top and bottom of the scrollbar) */
+div::-webkit-scrollbar-button {display:none}
+
+
+/* Scrollbar styling*/
+
+
+.scroll-name{
+
+  float: left;
+  width: 70%;
+  height: 250px;
+  overflow: scroll;
+  margin:60px 0 0 40px;
+
+  overflow-x: hidden;
+  padding: 0;
+
+
+
+
+}
+
+.scroll-item{
+  float: right;
+  width: 100%;
+  height: 260px;
+  margin:60px 40px 50px 0 ;
+
+  overflow: hidden;
+
+
+}
+
+.scroll-item p{
+  margin-top: 30px;
+  color: #555;
+  font-size: 70%;
+}
+
+.scroll-name a{
+  display: block;
+  margin: 90px auto;
+  text-decoration: none;
+  color: green;
+  font-weight: 400;
+  height: 70px;
+  width: 80%;
+
+  text-align: center;
+  padding-top: 20px;
+  cursor: pointer;
+
+  background-image: url(greenbg.jpg);
+  opacity:0.5;
+  border: 1px solid #fff;
+  border-right: transparent;
+  border-left: transparent;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 0 #555;
+
+}
+.js--tree-id{
+    opacity: 0;
+
+}
+.js--tree-id .animated{
+
+    opacity: 1;
+
+  }
+
+
+
+.scroll-item img{
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+}
+
+
+.info-tree-off{
+  display: none;
+
+}
+
+.info-tree-on{
+  display: block;
+
+}
+
+
+@keyframes high{
+
+  to{
+    transform: scale(1.05);
+    opacity:1;
+    border: 1px solid #fff;
+    color: #e8e8e8;
+    box-shadow: 10px 10px 0 0 #555;
+
+
+  }
+}
+
+.animate{
+  animation: high 1s;
+
+  animation-fill-mode: forwards;
+}
+/* .section-about{
+  overflow: hidden;
+} */
+#videobg{
+  z-index: -1;
+  position: fixed;
+  right: 0;
+   bottom: 0;
+  width: 100%;
+}
+
+.about-content{
+  background: rgba(214, 210, 210,0.5);
+  width:60%;
+  margin:20px auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.about-content p{
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 25px;
+
+  color: #555;
+  font-weight: 400;
+}
+
+.contact-form{
+  font-weight: 400;
+  width:60%;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 5px;
+  background: rgba(214, 210, 210,0.5);
+
+}
+
+.textinputclass{
+  width: 100%;
+  padding:7px;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+}
+
+*:focus{ outline: none;}
+
+input[type = submit]{
+  background-color: #275e3f;
+  border: 1px solid #efefef;
+  border-radius : 10px;
+  outline: 0;
+  padding:10px;
+  font-size: 90%;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+input[type = submit]:hover,
+input[type = submit]:active{
+  box-shadow: 2px 2px 0 0 #efefef;
+
+  background-color: #2E8B57;
+
+
+  }

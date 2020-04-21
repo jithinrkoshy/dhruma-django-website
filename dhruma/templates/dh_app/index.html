@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/normalize.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/grid.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <header class="front">
+    <nav>
+      <div class="row">
+        <img src="{%static 'images/dlsilvernc.svg'%}" alt="dh-logo" class="dhlogo">
+
+        <ul class = "navig">
+          <li> <a class = "home" href="#">Home</a> </li>
+          <li> <a class = "trees" href="#">Trees</a> </li>
+          <li> <a class = "about" href="#">About</a> </li>
+          <li> <a class = "contact" href="#">Contact</a> </li>
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <nav>
+      <ul class = "stickynull">
+        <div>
+
+
+        <li> <a class = "home" href="#">Home</a> </li>
+        <li> <a class = "trees" href="#">Trees</a> </li>
+        <li> <a class = "about" href="#">About</a> </li>
+        <li> <a class = "contact" href="#">Contact</a> </li>
+        </div>
+      </ul>
+    </nav>
+
+
+
+      <h1 class="test-head">Nature is the art of God.</h1>
+
+
+
+    </header>
+
+    <section class="section-content">
+      <video id="videobg" poster="{%static 'images/poster.png'%}" autoplay muted loop>
+   <source src="{%static 'images/whiteback.mp4'%}" type="video/mp4">
+ </video>
+        <h2>Into The Woods</h2>
+
+    <div class="row container">
+      <div class="col span-1-of-2 division">
+        <div class="scroll-name" id="scroll-name">
+          <a href = "tree/banyan" class = "banyan-parent animate">Banyan Tree</a>
+          <a href = "tree/oak" class = "oak-parent">Oak Tree</a>
+          <a href = "tree/mahagony" class = "mahagony-parent">Mahagony</a>
+          <a href = "tree/sandalwood" class = "sandalwood-parent">Sandalwood</a>
+          <a href = "tree/teak" class = "teak-parent">Teak</a>
+
+        </div>
+
+      </div>
+      <div class="col span-1-of-2">
+        <div class="scroll-item">
+          <div class="row">
+          {% if tree %}
+          {% for tr in tree %}
+          <div class = "js--tree-id {{tr.tree_class}} info-tree-off " >
+            <h3>{{tr.tree_name}}</h3>
+            <img src="{{tr.tree_pic.url}}" alt="pic">
+            <a href="#"></a>
+
+            <p>Click to know more information</p>
+          </div>
+          {% endfor %}
+          {% endif %}
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+    </section>
+
+    <section class="section-about">
+
+     <h2>About</h2>
+     <div class="row">
+     <div class="about-content">
+       <p>Dhruma is a non-profitable organisation which provide innovative ideas for the conservation of trees. It's hard to manage what you can't measure.
+         Dhruma website makes the best available data about forests available online for free, creating unprecedented transparency
+         about what is happening in forests worldwide. Better information supports smarter decisions about how to manage and protect forests
+         for current and future generations, and greater transparency helps the public hold governments and companies accountable for how their
+         decisions impact forests. Our data is accessed daily by governments, companies, civil society organizations, journalists, and everyday
+         people who care about their local forests.</p>
+         <br>
+         <p>
+         <a href="#">Click here to know more information</a>
+       </p>
+     </div>
+
+     </div>
+
+    </section>
+    <section class="section-contact">
+
+     <h2>Contact</h2>
+     <div class="row">
+     <div class="contact-content">
+
+     {%if form%}
+     <form class = "contact-form" method="post">
+       {% csrf_token %}
+       {% for fields in form %}
+       <div class="row">
+         <div class="col span-1-of-3">
+           <label for="fields.id_for_label">{{fields.label}}
+
+           </label>
+         </div>
+         <div class="col span-2-of-3">
+           {{fields}}
+         </div>
+
+
+       </div>
+
+       {% endfor %}
+       <div class="row">
+         <div class="col span-1-of-3">
+           <label>&nbsp;</label>
+         </div>
+         <div class="col span-2-of-3">
+           <input type="submit" value="Submit" >
+         </div>
+       </div>
+     </form>
+     {% endif %}
+     </div>
+
+     </div>
+
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.waypoints.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/script.js'%}"></script>
+  </body>
+</html>

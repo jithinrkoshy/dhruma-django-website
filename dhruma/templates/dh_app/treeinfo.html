@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/normalize.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/grid.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/tree-style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ionicons.min.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body onload="pageShow()" style="margin:0;">
+   <!--      LOADER           !-->
+       <div id="loader"></div>
+
+  <!--    LOADER             !-->
+  <div style="display:none;" id="tree-page" >
+    <header>
+
+<h1 class="tree-title">{{tree.tree_name}}</h1>
+
+<div class="pull-container">
+  <div class="slide-down pull js--slide-down">
+    <i class = "ion-chevron-down"></i>
+  </div>
+</div>
+
+
+</header>
+
+<section class="section-slide">
+
+
+      <div class="row css--row">
+        <div class="slider1 show">
+         <img src="{{tree.slide1.url}}" alt="pic">
+       </div>
+       <div class="slider2">
+        <img src="{{tree.slide2.url}}" alt="pic">
+       </div>
+       <div class="slider3">
+        <img src="{{tree.slide3.url}}" alt="pic">
+       </div>
+       <div class="left-arrow" onclick="slide('left')">
+         <i class = "ion-ios-arrow-back"></i>
+       </div>
+       <div class="right-arrow" onclick="slide('right')">
+          <i class = "ion-ios-arrow-forward"></i>
+       </div>
+
+      </div>
+</section>
+<section class="section-info">
+
+<div class="info-container">
+
+
+  <div class="info-content">
+    <p>
+      {{tree.tree_info_p1}}
+    </p>
+    <br>
+     <p>
+        {{tree.tree_info_p2}}
+     </p>
+     <br>
+      <p>
+          {{tree.tree_info_p3}}
+      </p>
+  </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="row">
+    <div class="col span-1-of-2">
+      <ul class="footer-nav">
+        <li> <a href="#">About us</a></li>
+        <li> <a href="#">Blog</a></li>
+        <li> <a href="#">Press</a></li>
+        <li> <a href="#">iOS App</a></li>
+        <li> <a href="#">Android App</a></li>
+      </ul>
+    </div>
+    <div class="col span-1-of-2">
+      <ul class="social-links">
+        <li> <a href="#"> <i class="ion-social-facebook"></i> </a> </li>
+        <li> <a href="#"> <i class="ion-social-twitter"></i> </a> </li>
+        <li> <a href="#"> <i class="ion-social-googleplus"></i> </a> </li>
+        <li> <a href="#"> <i class="ion-social-instagram"></i> </a> </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <p>
+    Copyright &copy; 2020 by Dhruma. All rights reserved.
+    </p>
+  </div>
+</footer>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/tree-script.js'%}"></script>
+
+  </body>
+</html>
